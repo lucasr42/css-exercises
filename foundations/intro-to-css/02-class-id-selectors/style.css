@@ -1,15 +1,19 @@
 .odd {
-    /* placeholder */
+    background-color: #ffc0cb;
+    font-family: "Verdana", "DejaVu Sans", "sans-serif";
 }
 
 #two {
-    /* placeholder */
+    color: #0000ff;
+    font-size: 36px;
 }
 
-#three {
-    /* placeholder */
+.three {
+    font-size: 24px;
 }
 
 #four {
-    /* placeholder */
+    background-color: #90ee90;
+    font-size: 24px;
+    font-weight: 700;
 }
