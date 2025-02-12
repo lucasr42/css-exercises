@@ -1,40 +1,49 @@
+/* lowest precedence */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* two classes, para is on two elements, small-para is on one element with two classes */
 .para,
 .small-para {
   color: hsl(0, 0%, 0%);
   font-weight: 800;
 }
 
-.small-para {
+/* one class on one element */
+.para.small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
+/* one class on two elements */
 .para {
   font-size: 22px;
 }
 
-.confirm {
+/* class on one element with an id and a second class */
+/* .confirm { */
+#confirm-button {
   background: green;
   color: white;
   font-weight: bold;
 } 
 
+/* class on two elements who both have different ids */
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
+/* class on inherited/combinator element */
+.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
 
+/* elemtn and chained class */
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
