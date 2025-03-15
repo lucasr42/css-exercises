@@ -5,6 +5,10 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* Yeahhhh!!! space-between pushes the container ITEMS to the edges of the container */
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +20,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 10px;
+  margin: 5px;
 }
 
 input {
@@ -25,14 +31,23 @@ input {
   width: 400px;
 }
 
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer {
+    background-color: rgba(128, 128, 128, 0.233);   
+}
+
 .header ul, .footer ul {
     display: flex;
     justify-content: space-between;
-    /*Puts a gap between the child elements (Each of the individual links) which makes sense because these attributes on specifically on the list*/
-    gap: 10px; 
-    list-style-type: none;
+    gap: 15px;
     margin: 0px;
     padding: 0px;
+    list-style-type: none;
 }
 
 a:link {
@@ -40,25 +55,10 @@ a:link {
     color: black;
 }
 
-.header, .footer {
-    display: flex;
-    /* This puts space between the containers items, pushing them to the ends of the container */
-    justify-content: space-between; 
-    padding: 10px;
-}
-
-.footer {
-    /* display: flex; */
-    /* flex-direction: column; */
-    background-color: rgba(128, 128, 128, 0.233);
-}
-
 .content {
     display: flex;
     flex-direction: column;
-    /* When flex-direction is column, align and justify switch, so align here is moving items left and right */
     align-items: center;
     justify-content: space-around;
     gap: 10px;
-    /* margin-bottom: 250px; */
 }
