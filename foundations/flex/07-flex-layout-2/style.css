@@ -35,7 +35,6 @@ body {
   border-radius: 4px;
   width: 250px;
   height: auto;
-  margin: 10px;
 }
 
 .content {
@@ -61,4 +60,5 @@ a:link {
     display: flex;
     flex-wrap: wrap;
     padding: 48px;
+    gap: 20px;
 }
