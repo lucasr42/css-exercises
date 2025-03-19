@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between; /*not sure if I need this. doesn't seem to be doing anything*/
 }
 
 .header {
@@ -26,6 +26,7 @@ body {
   background: royalblue;
   box-sizing: border-box;
   padding: 16px;
+  flex-shrink: 0;
 }
 
 .card {
@@ -34,11 +35,13 @@ body {
   border-radius: 4px;
   width: 250px;
   height: auto;
+  margin: 10px;
 }
 
 .content {
+    /* I think this is what had the cards and sidebar working together to take up the space. 
+    Setting the flex basis to auto tells flex to respect the height and width of the container items. */
     display: flex;
-    flex-wrap: wrap;
     flex: 1 0 auto;
 }
 
@@ -54,8 +57,8 @@ a:link {
     font-size: 24px;
 }
 
-/* .cardContent {
+.cardContent {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 0 auto;
-} */
+    padding: 48px;
+}
