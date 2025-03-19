@@ -3,8 +3,7 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; not sure if I need this. doesn't seem to be doing anything */
+  flex-direction: column; /* this pushes the header and footer to the upper/lower edges */
 }
 
 .header {
@@ -13,6 +12,7 @@ body {
   color: white;
   font-size: 32px;
   font-weight: 900;
+  /* need the flex on the header container to align the contents */
   display: flex;
   align-items: center;  
   padding-left: 16px;
@@ -22,6 +22,7 @@ body {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  /* need the flex on the footer container for the contents to be centered */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +33,7 @@ body {
   background: royalblue;
   box-sizing: border-box;
   padding: 16px;
-  flex-shrink: 0;
+  flex: 1 0 auto; /* prevents the sidebar from getting squished */
 }
 
 .card {
@@ -44,10 +45,8 @@ body {
 }
 
 .content {
-    /* I think this is what had the cards and sidebar working together to take up the space. 
-    Setting the flex basis to auto tells flex to respect the height and width of the container items. */
+    /* Having this gets the sidebar and cardContent next to each other instead of stacked */
     display: flex;
-    flex: 1 0 auto;
 }
 
 .sidebar ul {
