@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /*not sure if I need this. doesn't seem to be doing anything*/
+  /* justify-content: space-between; not sure if I need this. doesn't seem to be doing anything */
 }
 
 .header {
@@ -13,12 +13,18 @@ body {
   color: white;
   font-size: 32px;
   font-weight: 900;
+  display: flex;
+  align-items: center;  
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
